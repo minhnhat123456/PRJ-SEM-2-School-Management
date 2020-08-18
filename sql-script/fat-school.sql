@@ -20,12 +20,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user-id` varchar(10) NOT NULL,
   `user-name` varchar(200) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `user_image` VARCHAR(200) NOT NULL,
   `day-of-birth` date NOT NULL,
   `user-email` varchar(200) NOT NULL,
   `user-phone` varchar(12) NOT NULL,
   `user-address` varchar(500) NOT NULL,
   `user-role` int(2) NOT NULL,
-  `user-state` tinyint(1) NOT NULL DEFAULT '0'
+  `user-state` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` DATETIME(6) NOT NULL,
+  `updated_at` DATETIME(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

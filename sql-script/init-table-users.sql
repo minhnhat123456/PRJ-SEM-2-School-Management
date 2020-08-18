@@ -3,6 +3,7 @@ INSERT INTO `users`(`user-id`, `user-name`, `password`, `day-of-birth`, `user-em
     'admin001',
     'Lê Văn Trọng Nghĩa',
     '123456',
+    'assets/images/faces/profile/avatar-1.jpg',
     '1996-10-12',
     'nghialvtts1910018@fpt.edu.vn',
     '0379465196',
