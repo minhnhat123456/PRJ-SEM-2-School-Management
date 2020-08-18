@@ -20,9 +20,6 @@
                                         <i class="mdi mdi-check-circle-outline"></i>
                                     </span>
                                 </div>
-                                @if ($errors->any())
-                                    <small>{{ $errors->user_name }}</small>
-                                @endif
                             </div>
                         </div>
                         <div class="form-group">
@@ -34,9 +31,6 @@
                                         <i class="mdi mdi-check-circle-outline"></i>
                                     </span>
                                 </div>
-                                @if ($errors->any())
-                                    <small>{{ $errors->password }}</small>
-                                @endif
                             </div>
                         </div>
                         <div class="form-group">
