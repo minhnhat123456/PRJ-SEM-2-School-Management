@@ -10,7 +10,11 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        $user_name = $request->input('user-name');
+        $validatedData = $request->validate([
+            'user_name' => 'required|min:6|regex:/[a-zA-z0-9]*/',
+            'password' => 'required|min:6|regex:/[a-zA-z0-9]*/'
+        ]);
+        $user_name = $request->input('user_name');
         $password = $request->input('password');
 
         $user = User::where('user_id', $user_name)->first();

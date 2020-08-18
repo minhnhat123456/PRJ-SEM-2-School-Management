@@ -34,7 +34,7 @@ Route::middleware('login')->group(function () {
             Route::get('update-{user_id}', "AccountController@update");
             Route::post('submit', "AccountController@submit");
         });
-        Route::middleware('isTeacher')->group(function () {
+        Route::middleware('isAdmin')->group(function () {
             Route::group(['prefix' => 'teacher'], function () {
                 Route::get('list', function () {
                     $teacher = User::where('user_role', 2)->get();
@@ -45,8 +45,7 @@ Route::middleware('login')->group(function () {
                 });
                 Route::post('submit', "AccountController@submit");
             });
-        });
-        Route::middleware('isStudent')->group(function () {
+       
             Route::group(['prefix' => 'student'], function () {
                 Route::get('list', function () {
                     $student = User::where('user_role', 3)->get();

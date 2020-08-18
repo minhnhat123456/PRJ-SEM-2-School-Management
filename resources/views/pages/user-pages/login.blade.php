@@ -14,12 +14,15 @@
                         <div class="form-group">
                             <label class="label">Username</label>
                             <div class="input-group">
-                                <input type="text" name="user-name" class="form-control" placeholder="Username">
+                                <input type="text" name="user_name" class="form-control" placeholder="Username">
                                 <div class="input-group-append">
                                     <span class="input-group-text">
                                         <i class="mdi mdi-check-circle-outline"></i>
                                     </span>
                                 </div>
+                                @if ($errors->any())
+                                    <small>{{ $errors->user_name }}</small>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
@@ -31,18 +34,22 @@
                                         <i class="mdi mdi-check-circle-outline"></i>
                                     </span>
                                 </div>
+                                @if ($errors->any())
+                                    <small>{{ $errors->password }}</small>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </div>
-                        <div class="form-group d-flex justify-content-between">
-                            {{-- <div class="form-check-flat mt-0">
+                        {{-- {{ $errors }} --}}
+                        {{-- <div class="form-group d-flex justify-content-between">
+                            <div class="form-check-flat mt-0">
                                 <label class="form-check-label">
                                     <input type="checkbox" class="form-check-input"> Keep me signed in </label>
-                            </div> --}}
+                            </div>
                             <a href="#" class="text-small forgot-password text-black">Forgot Password</a>
-                        </div>
+                        </div> --}}
                         {{-- <div class="form-group">
                             <button class="btn btn-block g-login">
                                 <img class="mr-3" src="{{ url('assets/images/file-icons/icon-google.svg') }}" alt="">Log in
@@ -71,5 +78,5 @@
 
 @endsection
 @push('custom-scripts')
-    
+
 @endpush

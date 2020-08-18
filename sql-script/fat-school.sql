@@ -17,16 +17,16 @@ CREATE TABLE IF NOT EXISTS `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `user-id` varchar(10) NOT NULL,
-  `user-name` varchar(200) NOT NULL,
+  `user_id` varchar(10) NOT NULL,
+  `user_name` varchar(200) NOT NULL,
   `password` varchar(100) NOT NULL,
   `user_image` VARCHAR(200) NOT NULL,
-  `day-of-birth` date NOT NULL,
-  `user-email` varchar(200) NOT NULL,
-  `user-phone` varchar(12) NOT NULL,
-  `user-address` varchar(500) NOT NULL,
-  `user-role` int(2) NOT NULL,
-  `user-state` tinyint(1) NOT NULL DEFAULT '0',
+  `day_of_birth` date NOT NULL,
+  `user_email` varchar(200) NOT NULL,
+  `user_phone` varchar(12) NOT NULL,
+  `user_address` varchar(500) NOT NULL,
+  `user_role` int(2) NOT NULL,
+  `user_state` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` DATETIME(6) NOT NULL,
   `updated_at` DATETIME(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -36,12 +36,12 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`code`);
 
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user-id`),
-  ADD KEY `FK_user_role` (`user-role`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD KEY `FK_user_role` (`user_role`);
 
 
 ALTER TABLE `users`
-  ADD CONSTRAINT `FK_user_role` FOREIGN KEY (`user-role`) REFERENCES `roles` (`code`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_user_role` FOREIGN KEY (`user_role`) REFERENCES `roles` (`code`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
