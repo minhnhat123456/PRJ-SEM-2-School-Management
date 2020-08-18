@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="_token" content="{{ csrf_token() }}">
   
-  <link rel="shortcut icon" href="{{ asset('/images/logo-250.ico') ?? asset('/favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ url('assets/images/favicon.png') }}">
 
   <!-- plugin css -->
   {!! Html::style('assets/plugins/@mdi/font/css/materialdesignicons.min.css') !!}
