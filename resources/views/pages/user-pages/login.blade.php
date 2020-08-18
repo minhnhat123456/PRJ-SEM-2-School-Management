@@ -17,7 +17,7 @@
                                 <input type="text" name="user-name" class="form-control" placeholder="Username">
                                 <div class="input-group-append">
                                     <span class="input-group-text">
-                                        <i class="mdi mdi-check-circle-outline text-success"></i>
+                                        <i class="mdi mdi-check-circle-outline"></i>
                                     </span>
                                 </div>
                             </div>
@@ -71,7 +71,5 @@
 
 @endsection
 @push('custom-scripts')
-    <script>
-        document.forms
-    </script>
+    
 @endpush
