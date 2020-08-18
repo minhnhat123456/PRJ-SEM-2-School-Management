@@ -1,4 +1,4 @@
-INSERT INTO `users`(`user-id`, `user-name`, `password`, `day-of-birth`, `user-email`, `user-phone`, `user-address`, `user-role`, `user-state`) VALUES 
+INSERT INTO `users`(`user-id`, `user-name`, `password`,`user_image`, `day-of-birth`, `user-email`, `user-phone`, `user-address`, `user-role`, `user-state`) VALUES 
 (
     'admin001',
     'Lê Văn Trọng Nghĩa',
